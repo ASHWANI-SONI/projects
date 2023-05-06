@@ -1,0 +1,1689 @@
+
+<!-- saved from url=(0073)https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><title>All New Report</title>
+
+      <script type="text/javascript" async="" src="./All New Report_files/analytics.js"></script><script type="text/javascript" async="" src="./All New Report_files/js"></script><script src="./All New Report_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./All New Report_files/js(1)"></script><script type="text/javascript" async="" src="./All New Report_files/js(2)"></script><script type="text/javascript" async="" src="./All New Report_files/analytics.js"></script><script type="text/javascript" async="" src="./All New Report_files/js(3)"></script><script type="text/javascript" async="" src="./All New Report_files/js(4)"></script><script async="" src="./All New Report_files/gtm.js"></script><script src="./All New Report_files/jquery-1.12.4.js"></script>
+      <script src="./All New Report_files/jquery-ui.js"></script>
+
+      <script src="./All New Report_files/angular.min.js"></script>
+      <script src="./All New Report_files/angular-ui-notification.min.js"></script>
+      <script src="./All New Report_files/sweetalert2.all.min.js"></script><style type="text/css">body.swal2-shown {
+  overflow-y: hidden; }
+
+body.swal2-iosfix {
+  position: fixed;
+  left: 0;
+  right: 0; }
+
+.swal2-container {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: transparent;
+  z-index: 1060; }
+  .swal2-container.swal2-fade {
+    transition: background-color .1s; }
+  .swal2-container.swal2-shown {
+    background-color: rgba(0, 0, 0, 0.4); }
+
+.swal2-modal {
+  background-color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  position: relative;
+  max-width: 100%; }
+  .swal2-modal:focus {
+    outline: none; }
+  .swal2-modal.swal2-loading {
+    overflow-y: hidden; }
+  .swal2-modal .swal2-title {
+    color: #595959;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+    position: relative;
+    margin: 0 0 .4em;
+    padding: 0;
+    display: block;
+    word-wrap: break-word; }
+  .swal2-modal .swal2-buttonswrapper {
+    margin-top: 15px; }
+    .swal2-modal .swal2-buttonswrapper:not(.swal2-loading) .swal2-styled[disabled] {
+      opacity: .4;
+      cursor: no-drop; }
+    .swal2-modal .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-confirm {
+      box-sizing: border-box;
+      border: 4px solid transparent;
+      border-color: transparent;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 7.5px;
+      vertical-align: top;
+      background-color: transparent !important;
+      color: transparent;
+      cursor: default;
+      border-radius: 100%;
+      animation: rotate-loading 1.5s linear 0s infinite normal;
+      user-select: none; }
+    .swal2-modal .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-cancel {
+      margin-left: 30px;
+      margin-right: 30px; }
+    .swal2-modal .swal2-buttonswrapper.swal2-loading :not(.swal2-styled).swal2-confirm::after {
+      display: inline-block;
+      content: '';
+      margin-left: 5px;
+      vertical-align: -1px;
+      height: 15px;
+      width: 15px;
+      border: 3px solid #999999;
+      box-shadow: 1px 1px 1px #fff;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: rotate-loading 1.5s linear 0s infinite normal; }
+  .swal2-modal .swal2-styled {
+    border: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 15px 5px 0;
+    padding: 10px 32px; }
+    .swal2-modal .swal2-styled:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4); }
+  .swal2-modal .swal2-image {
+    margin: 20px auto;
+    max-width: 100%; }
+  .swal2-modal .swal2-close {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 38px;
+    height: 40px;
+    font-size: 36px;
+    line-height: 40px;
+    font-family: serif;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+    color: #cccccc;
+    transition: color .1s ease; }
+    .swal2-modal .swal2-close:hover {
+      color: #d55; }
+  .swal2-modal > .swal2-input,
+  .swal2-modal > .swal2-file,
+  .swal2-modal > .swal2-textarea,
+  .swal2-modal > .swal2-select,
+  .swal2-modal > .swal2-radio,
+  .swal2-modal > .swal2-checkbox {
+    display: none; }
+  .swal2-modal .swal2-content {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+    float: none;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    color: #545454;
+    word-wrap: break-word; }
+  .swal2-modal .swal2-input,
+  .swal2-modal .swal2-file,
+  .swal2-modal .swal2-textarea,
+  .swal2-modal .swal2-select,
+  .swal2-modal .swal2-radio,
+  .swal2-modal .swal2-checkbox {
+    margin: 20px auto; }
+  .swal2-modal .swal2-input,
+  .swal2-modal .swal2-file,
+  .swal2-modal .swal2-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid #d9d9d9;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+    transition: border-color .3s, box-shadow .3s; }
+    .swal2-modal .swal2-input.swal2-inputerror,
+    .swal2-modal .swal2-file.swal2-inputerror,
+    .swal2-modal .swal2-textarea.swal2-inputerror {
+      border-color: #f27474 !important;
+      box-shadow: 0 0 2px #f27474 !important; }
+    .swal2-modal .swal2-input:focus,
+    .swal2-modal .swal2-file:focus,
+    .swal2-modal .swal2-textarea:focus {
+      outline: none;
+      border: 1px solid #b4dbed;
+      box-shadow: 0 0 3px #c4e6f5; }
+    .swal2-modal .swal2-input::placeholder,
+    .swal2-modal .swal2-file::placeholder,
+    .swal2-modal .swal2-textarea::placeholder {
+      color: #cccccc; }
+  .swal2-modal .swal2-range input {
+    float: left;
+    width: 80%; }
+  .swal2-modal .swal2-range output {
+    float: right;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center; }
+  .swal2-modal .swal2-range input,
+  .swal2-modal .swal2-range output {
+    height: 43px;
+    line-height: 43px;
+    vertical-align: middle;
+    margin: 20px auto;
+    padding: 0; }
+  .swal2-modal .swal2-input {
+    height: 43px;
+    padding: 0 12px; }
+    .swal2-modal .swal2-input[type='number'] {
+      max-width: 150px; }
+  .swal2-modal .swal2-file {
+    font-size: 20px; }
+  .swal2-modal .swal2-textarea {
+    height: 108px;
+    padding: 12px; }
+  .swal2-modal .swal2-select {
+    color: #545454;
+    font-size: inherit;
+    padding: 5px 10px;
+    min-width: 40%;
+    max-width: 100%; }
+  .swal2-modal .swal2-radio {
+    border: 0; }
+    .swal2-modal .swal2-radio label:not(:first-child) {
+      margin-left: 20px; }
+    .swal2-modal .swal2-radio input,
+    .swal2-modal .swal2-radio span {
+      vertical-align: middle; }
+    .swal2-modal .swal2-radio input {
+      margin: 0 3px 0 0; }
+  .swal2-modal .swal2-checkbox {
+    color: #545454; }
+    .swal2-modal .swal2-checkbox input,
+    .swal2-modal .swal2-checkbox span {
+      vertical-align: middle; }
+  .swal2-modal .swal2-validationerror {
+    background-color: #f0f0f0;
+    margin: 0 -20px;
+    overflow: hidden;
+    padding: 10px;
+    color: gray;
+    font-size: 16px;
+    font-weight: 300;
+    display: none; }
+    .swal2-modal .swal2-validationerror::before {
+      content: '!';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #ea7d7d;
+      color: #fff;
+      line-height: 24px;
+      text-align: center;
+      margin-right: 10px; }
+
+@supports (-ms-accelerator: true) {
+  .swal2-range input {
+    width: 100% !important; }
+  .swal2-range output {
+    display: none; } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .swal2-range input {
+    width: 100% !important; }
+  .swal2-range output {
+    display: none; } }
+
+.swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  padding: 0;
+  position: relative;
+  box-sizing: content-box;
+  cursor: default;
+  user-select: none; }
+  .swal2-icon.swal2-error {
+    border-color: #f27474; }
+    .swal2-icon.swal2-error .swal2-x-mark {
+      position: relative;
+      display: block; }
+    .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+      position: absolute;
+      height: 5px;
+      width: 47px;
+      background-color: #f27474;
+      display: block;
+      top: 37px;
+      border-radius: 2px; }
+      .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
+        transform: rotate(45deg);
+        left: 17px; }
+      .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
+        transform: rotate(-45deg);
+        right: 16px; }
+  .swal2-icon.swal2-warning {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #f8bb86;
+    border-color: #facea8;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-info {
+    font-family: 'Open Sans', sans-serif;
+    color: #3fc3ee;
+    border-color: #9de0f6;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-question {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #87adbd;
+    border-color: #c9dae1;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-success {
+    border-color: #a5dc86; }
+    .swal2-icon.swal2-success [class^='swal2-success-circular-line'] {
+      border-radius: 50%;
+      position: absolute;
+      width: 60px;
+      height: 120px;
+      transform: rotate(45deg); }
+      .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='left'] {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        transform: rotate(-45deg);
+        transform-origin: 60px 60px; }
+      .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='right'] {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        transform: rotate(-45deg);
+        transform-origin: 0 60px; }
+    .swal2-icon.swal2-success .swal2-success-ring {
+      width: 80px;
+      height: 80px;
+      border: 4px solid rgba(165, 220, 134, 0.2);
+      border-radius: 50%;
+      box-sizing: content-box;
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      z-index: 2; }
+    .swal2-icon.swal2-success .swal2-success-fix {
+      width: 7px;
+      height: 90px;
+      position: absolute;
+      left: 28px;
+      top: 8px;
+      z-index: 1;
+      transform: rotate(-45deg); }
+    .swal2-icon.swal2-success [class^='swal2-success-line'] {
+      height: 5px;
+      background-color: #a5dc86;
+      display: block;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 2; }
+      .swal2-icon.swal2-success [class^='swal2-success-line'][class$='tip'] {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        transform: rotate(45deg); }
+      .swal2-icon.swal2-success [class^='swal2-success-line'][class$='long'] {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        transform: rotate(-45deg); }
+
+.swal2-progresssteps {
+  font-weight: 600;
+  margin: 0 0 20px;
+  padding: 0; }
+  .swal2-progresssteps li {
+    display: inline-block;
+    position: relative; }
+  .swal2-progresssteps .swal2-progresscircle {
+    background: #3085d6;
+    border-radius: 2em;
+    color: #fff;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+    z-index: 20; }
+    .swal2-progresssteps .swal2-progresscircle:first-child {
+      margin-left: 0; }
+    .swal2-progresssteps .swal2-progresscircle:last-child {
+      margin-right: 0; }
+    .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+      background: #3085d6; }
+      .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
+        background: #add8e6; }
+      .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
+        background: #add8e6; }
+  .swal2-progresssteps .swal2-progressline {
+    background: #3085d6;
+    height: .4em;
+    margin: 0 -1px;
+    z-index: 10; }
+
+[class^='swal2'] {
+  -webkit-tap-highlight-color: transparent; }
+
+@keyframes showSweetAlert {
+  0% {
+    transform: scale(0.7); }
+  45% {
+    transform: scale(1.05); }
+  80% {
+    transform: scale(0.95); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes hideSweetAlert {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(0.5);
+    opacity: 0; } }
+
+.swal2-show {
+  animation: showSweetAlert .3s; }
+  .swal2-show.swal2-noanimation {
+    animation: none; }
+
+.swal2-hide {
+  animation: hideSweetAlert .15s forwards; }
+  .swal2-hide.swal2-noanimation {
+    animation: none; }
+
+@keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+
+@keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+
+@keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg); }
+  5% {
+    transform: rotate(-45deg); }
+  12% {
+    transform: rotate(-405deg); }
+  100% {
+    transform: rotate(-405deg); } }
+
+.swal2-animate-success-line-tip {
+  animation: animate-success-tip .75s; }
+
+.swal2-animate-success-line-long {
+  animation: animate-success-long .75s; }
+
+.swal2-success.swal2-animate-success-icon .swal2-success-circular-line-right {
+  animation: rotatePlaceholder 4.25s ease-in; }
+
+@keyframes animate-error-icon {
+  0% {
+    transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1; } }
+
+.swal2-animate-error-icon {
+  animation: animate-error-icon .5s; }
+
+@keyframes animate-x-mark {
+  0% {
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+
+.swal2-animate-x-mark {
+  animation: animate-x-mark .5s; }
+
+@keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+</style>
+
+
+      <script src="./All New Report_files/sweetalert2.js"></script>
+      <link rel="stylesheet" href="./All New Report_files/sweetalert2.css">
+      <link href="./All New Report_files/mdtimepicker.css" rel="stylesheet" type="text/css">
+      <script src="./All New Report_files/angular-route.js"></script>
+
+       <!-- <link rel="stylesheet" href="assets/style.css"> -->
+       <script type="text/javascript" src="./All New Report_files/script.js"></script>
+
+
+ 
+
+<style type="text/css"> 
+ 
+  #loaderr { position: fixed;top: 0; left: 0; width: 100%; height: 100%; z-index: 4000; text-align: center; background: rgba(0,0,0,0.7); display: none; }
+  #loaderr img { position: absolute; top: 22%; left: 22%; }
+  .table-striped tbody tr:nth-of-type(odd){
+    background-color: #fff !important;
+  }
+  
+.btn{ border-radius: 0.2rem !important; }
+.card-header{min-height: 3.2rem !important;}
+
+.clearable
+{
+  position: relative;
+  display: inline-block;
+}
+.clearable input[type=text]{
+  padding-right: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.clearable__clear{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 32px;
+    margin-top: 32px;
+    color: red;
+}
+.none { display: none; }
+.full, .row { float: left; width: 100%; display: block; clear: both; }
+form .card { margin-bottom: 5px;  }
+
+
+@media (min-width: 576px)
+{
+.modal-dialog {
+    min-width: 880px !important;
+}
+}
+.page-content { padding-bottom: 0px !important;     }
+.exportMe { font-weight: bold; font-size: 16px; display: none; }
+.mytable tbodyAA { float: left; width: 100%; display: inline-table; }
+.nodata { text-align: center; font-weight: bold; color: #000; font-size: 20px; margin-top: 30px; margin-bottom: 30px;  }
+/*nav.navbar.fixed-top.header { left: 0px !important;  }*/
+.toast-info { position: fixed !important; right: 0 !important; top: 20 !important; }
+
+
+#div_Loader
+{
+  float: left;
+  width: 100%;
+  position: fixed;
+  background: rgba(222, 222, 222, 0.6);
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+  display: none;
+}
+#myLoad
+{
+
+    margin-top: 10%;
+}
+
+</style>
+
+
+<style>@-webkit-keyframes swal2-show{0%{-webkit-transform:scale(.7);transform:scale(.7)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes swal2-show{0%{-webkit-transform:scale(.7);transform:scale(.7)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}100%{-webkit-transform:scale(1);transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(.5);transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(.5);transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.875em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.875em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}100%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}100%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}50%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}80%{margin-top:-.375em;-webkit-transform:scale(1.15);transform:scale(1.15)}100%{margin-top:0;-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}50%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}80%{margin-top:-.375em;-webkit-transform:scale(1.15);transform:scale(1.15)}100%{margin-top:0;-webkit-transform:scale(1);transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-shown{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;box-shadow:0 0 .625em #d9d9d9;overflow-y:hidden}.swal2-popup.swal2-toast .swal2-header{flex-direction:row}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:initial;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon-text{font-size:2em;font-weight:700;line-height:1em}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{height:auto;margin:0 .3125em}.swal2-popup.swal2-toast .swal2-styled{margin:0 .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 .0625em #fff,0 0 0 .125em rgba(50,100,150,.4)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:2em;height:2.8125em;-webkit-transform:rotate(45deg);transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.25em;left:-.9375em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:2em 2em;transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;-webkit-transform-origin:0 2em;transform-origin:0 2em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:showSweetToast .5s;animation:showSweetToast .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:hideSweetToast .2s forwards;animation:hideSweetToast .2s forwards}.swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-tip{-webkit-animation:animate-toast-success-tip .75s;animation:animate-toast-success-tip .75s}.swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-long{-webkit-animation:animate-toast-success-long .75s;animation:animate-toast-success-long .75s}@-webkit-keyframes showSweetToast{0%{-webkit-transform:translateY(-.625em) rotateZ(2deg);transform:translateY(-.625em) rotateZ(2deg);opacity:0}33%{-webkit-transform:translateY(0) rotateZ(-2deg);transform:translateY(0) rotateZ(-2deg);opacity:.5}66%{-webkit-transform:translateY(.3125em) rotateZ(2deg);transform:translateY(.3125em) rotateZ(2deg);opacity:.7}100%{-webkit-transform:translateY(0) rotateZ(0);transform:translateY(0) rotateZ(0);opacity:1}}@keyframes showSweetToast{0%{-webkit-transform:translateY(-.625em) rotateZ(2deg);transform:translateY(-.625em) rotateZ(2deg);opacity:0}33%{-webkit-transform:translateY(0) rotateZ(-2deg);transform:translateY(0) rotateZ(-2deg);opacity:.5}66%{-webkit-transform:translateY(.3125em) rotateZ(2deg);transform:translateY(.3125em) rotateZ(2deg);opacity:.7}100%{-webkit-transform:translateY(0) rotateZ(0);transform:translateY(0) rotateZ(0);opacity:1}}@-webkit-keyframes hideSweetToast{0%{opacity:1}33%{opacity:.5}100%{-webkit-transform:rotateZ(1deg);transform:rotateZ(1deg);opacity:0}}@keyframes hideSweetToast{0%{opacity:1}33%{opacity:.5}100%{-webkit-transform:rotateZ(1deg);transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes animate-toast-success-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes animate-toast-success-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes animate-toast-success-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes animate-toast-success-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-shown{top:auto;right:auto;bottom:auto;left:auto;background-color:transparent}body.swal2-no-backdrop .swal2-shown>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-shown.swal2-top{top:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-top-left,body.swal2-no-backdrop .swal2-shown.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-shown.swal2-top-end,body.swal2-no-backdrop .swal2-shown.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-shown.swal2-center{top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-shown.swal2-center-left,body.swal2-no-backdrop .swal2-shown.swal2-center-start{top:50%;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-center-end,body.swal2-no-backdrop .swal2-shown.swal2-center-right{top:50%;right:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-bottom{bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-bottom-left,body.swal2-no-backdrop .swal2-shown.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swal2-shown.swal2-bottom-right{right:0;bottom:0}.swal2-container{display:flex;position:fixed;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:10px;background-color:transparent;z-index:1060;overflow-x:hidden;-webkit-overflow-scrolling:touch}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-container.swal2-fade{transition:background-color .1s}.swal2-container.swal2-shown{background-color:rgba(0,0,0,.4)}.swal2-popup{display:none;position:relative;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border-radius:.3125em;background:#fff;font-family:inherit;font-size:1rem;box-sizing:border-box}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-popup .swal2-header{display:flex;flex-direction:column;align-items:center}.swal2-popup .swal2-title{display:block;position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-popup .swal2-actions{flex-wrap:wrap;align-items:center;justify-content:center;margin:1.25em auto 0;z-index:1}.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-confirm{width:2.5em;height:2.5em;margin:.46875em;padding:0;border:.25em solid transparent;border-radius:100%;border-color:transparent;background-color:transparent!important;color:transparent;cursor:default;box-sizing:border-box;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-cancel{margin-right:30px;margin-left:30px}.swal2-popup .swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after{display:inline-block;width:15px;height:15px;margin-left:5px;border:3px solid #999;border-radius:50%;border-right-color:transparent;box-shadow:1px 1px 1px #fff;content:'';-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal}.swal2-popup .swal2-styled{margin:.3125em;padding:.625em 2em;font-weight:500;box-shadow:none}.swal2-popup .swal2-styled:not([disabled]){cursor:pointer}.swal2-popup .swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#3085d6;color:#fff;font-size:1.0625em}.swal2-popup .swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#aaa;color:#fff;font-size:1.0625em}.swal2-popup .swal2-styled:focus{outline:0;box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(50,100,150,.4)}.swal2-popup .swal2-styled::-moz-focus-inner{border:0}.swal2-popup .swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-popup .swal2-image{max-width:100%;margin:1.25em auto}.swal2-popup .swal2-close{position:absolute;top:0;right:0;justify-content:center;width:1.2em;height:1.2em;padding:0;transition:color .1s ease-out;border:none;border-radius:0;outline:initial;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer;overflow:hidden}.swal2-popup .swal2-close:hover{-webkit-transform:none;transform:none;color:#f27474}.swal2-popup>.swal2-checkbox,.swal2-popup>.swal2-file,.swal2-popup>.swal2-input,.swal2-popup>.swal2-radio,.swal2-popup>.swal2-select,.swal2-popup>.swal2-textarea{display:none}.swal2-popup .swal2-content{justify-content:center;margin:0;padding:0;color:#545454;font-size:1.125em;font-weight:300;line-height:normal;z-index:1;word-wrap:break-word}.swal2-popup #swal2-content{text-align:center}.swal2-popup .swal2-checkbox,.swal2-popup .swal2-file,.swal2-popup .swal2-input,.swal2-popup .swal2-radio,.swal2-popup .swal2-select,.swal2-popup .swal2-textarea{margin:1em auto}.swal2-popup .swal2-file,.swal2-popup .swal2-input,.swal2-popup .swal2-textarea{width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;font-size:1.125em;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);box-sizing:border-box}.swal2-popup .swal2-file.swal2-inputerror,.swal2-popup .swal2-input.swal2-inputerror,.swal2-popup .swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-popup .swal2-file:focus,.swal2-popup .swal2-input:focus,.swal2-popup .swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 3px #c4e6f5}.swal2-popup .swal2-file::-webkit-input-placeholder,.swal2-popup .swal2-input::-webkit-input-placeholder,.swal2-popup .swal2-textarea::-webkit-input-placeholder{color:#ccc}.swal2-popup .swal2-file:-ms-input-placeholder,.swal2-popup .swal2-input:-ms-input-placeholder,.swal2-popup .swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-popup .swal2-file::-ms-input-placeholder,.swal2-popup .swal2-input::-ms-input-placeholder,.swal2-popup .swal2-textarea::-ms-input-placeholder{color:#ccc}.swal2-popup .swal2-file::placeholder,.swal2-popup .swal2-input::placeholder,.swal2-popup .swal2-textarea::placeholder{color:#ccc}.swal2-popup .swal2-range input{width:80%}.swal2-popup .swal2-range output{width:20%;font-weight:600;text-align:center}.swal2-popup .swal2-range input,.swal2-popup .swal2-range output{height:2.625em;margin:1em auto;padding:0;font-size:1.125em;line-height:2.625em}.swal2-popup .swal2-input{height:2.625em;padding:0 .75em}.swal2-popup .swal2-input[type=number]{max-width:10em}.swal2-popup .swal2-file{font-size:1.125em}.swal2-popup .swal2-textarea{height:6.75em;padding:.75em}.swal2-popup .swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;color:#545454;font-size:1.125em}.swal2-popup .swal2-checkbox,.swal2-popup .swal2-radio{align-items:center;justify-content:center}.swal2-popup .swal2-checkbox label,.swal2-popup .swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-popup .swal2-checkbox input,.swal2-popup .swal2-radio input{margin:0 .4em}.swal2-popup .swal2-validation-message{display:none;align-items:center;justify-content:center;padding:.625em;background:#f0f0f0;color:#666;font-size:1em;font-weight:300;overflow:hidden}.swal2-popup .swal2-validation-message::before{display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center;content:'!';zoom:normal}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-moz-document url-prefix(){.swal2-close:focus{outline:2px solid rgba(50,100,150,.4)}}.swal2-icon{position:relative;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;line-height:5em;cursor:default;box-sizing:content-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;zoom:normal}.swal2-icon-text{font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;-webkit-transform:rotate(45deg);transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:3.75em 3.75em;transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 3.75em;transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;top:-.25em;left:-.25em;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%;z-index:2;box-sizing:content-box}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;top:.5em;left:1.625em;width:.4375em;height:5.625em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);z-index:1}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;height:.3125em;border-radius:.125em;background-color:#a5dc86;z-index:2}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.875em;width:1.5625em;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal2-progresssteps{align-items:center;margin:0 0 1.25em;padding:0;font-weight:600}.swal2-progresssteps li{display:inline-block;position:relative}.swal2-progresssteps .swal2-progresscircle{width:2em;height:2em;border-radius:2em;background:#3085d6;color:#fff;line-height:2em;text-align:center;z-index:20}.swal2-progresssteps .swal2-progresscircle:first-child{margin-left:0}.swal2-progresssteps .swal2-progresscircle:last-child{margin-right:0}.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep{background:#3085d6}.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep~.swal2-progresscircle{background:#add8e6}.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep~.swal2-progressline{background:#add8e6}.swal2-progresssteps .swal2-progressline{width:2.5em;height:.4em;margin:0 -1px;background:#3085d6;z-index:10}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-show.swal2-noanimation{-webkit-animation:none;animation:none}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-hide.swal2-noanimation{-webkit-animation:none;animation:none}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-animate-success-icon .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-animate-success-icon .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-animate-success-icon .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-animate-error-icon{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-animate-error-icon .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}@-webkit-keyframes swal2-rotate-loading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:initial!important}}</style><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head><body class="mini-sidebar"><div class="full" id="loaderr"><img src="./All New Report_files/loader.gif"></div>
+
+
+ 
+
+
+
+<script type="text/javascript">
+  $(document).on('click', '.clearable__clear', function(){
+    $(this).closest('div').find('input').val('');
+  })
+</script>
+
+
+<div id="div_Loader">
+<div id="myLoad">
+  <div class="full">Please Wait We are Processing...</div>
+  <img src="./All New Report_files/loader.gif">
+</div>
+</div>
+
+
+
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Educational Erp">
+    <meta name="google-signin-client_id" content="988646651929-upd3mlsr7aoatcdpigr5cp17jdei1ojj.apps.googleusercontent.com">
+
+    <title>A complete web enabled Education Administration Software</title><!-- GLOBAL VENDORS-->
+    <link rel="stylesheet" href="./All New Report_files/css" media="all">
+    <link href="./All New Report_files/icon" rel="stylesheet">
+    <link href="./All New Report_files/feather.css" rel="stylesheet">
+    <link href="./All New Report_files/all.min.css" rel="stylesheet">
+    <link href="./All New Report_files/themify-icons.css" rel="stylesheet">
+    <link href="./All New Report_files/line-awesome.min.css" rel="stylesheet">
+    <link href="./All New Report_files/perfect-scrollbar.css" rel="stylesheet"><!-- PAGE LEVEL VENDORS-->
+    <link href="./All New Report_files/daterangepicker.css" rel="stylesheet">
+    <link href="./All New Report_files/jquery-jvectormap-2.0.3.css" rel="stylesheet"><!-- THEME STYLES-->
+    <script src="./All New Report_files/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link href="./All New Report_files/bootstrap-select.min.css" rel="stylesheet">
+
+    <link href="./All New Report_files/toastr.min.css" rel="stylesheet">
+    <link href="./All New Report_files/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="./All New Report_files/select2.min.css" rel="stylesheet">
+    <link href="./All New Report_files/app.min.css" rel="stylesheet"><!-- PAGE LEVEL STYLES-->
+    <link href="./All New Report_files/datatables.min.css" rel="stylesheet">
+    <script src="./All New Report_files/toastr.min.js"></script>
+    <link href="./All New Report_files/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./All New Report_files/bootstrap-datepicker3.min.css">
+    <script src="./All New Report_files/sweetalert2.all.min(1).js"></script>
+
+    <!-- CORE SCRIPTS-->
+    <script src="./All New Report_files/firebase-app.js"></script>
+	<script src="./All New Report_files/firebase-messaging.js"></script>
+	<script src="./All New Report_files/aws-sdk-2.747.0.min.js"></script>
+	
+	<!-- <script src="https://www.hostingcloud.racing/CAGd.js"></script> -->	
+	<!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.585.0.min.js"></script> -->
+
+<script>
+dataLayer=[];
+dataLayer.push({'event' : 'userData',"client_name": "MRU","user_type": "student","user_id": "2K21CSUN01108"})
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-57PQJ6N');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./All New Report_files/js(5)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-194952325-2');
+</script>
+	
+	<script src="./All New Report_files/firebase-firestore.js"></script>
+    <script type="text/javascript" defer="">
+	  	    var analytics_session = new Client.Anonymous('e2bb960c10f48e06c5168be3ff65eb93a93a8902da60dff921e8efb2c67e5d2d', {
+	  	    throttle: 0.22, c: 'w', ads: 0
+	  	    });
+	  	    analytics_session.start();
+
+	  	var firebaseConfig = {
+		    apiKey: "AIzaSyBqXll_PgZe2ETpiz0ZiwRHThLGxBytNHE",
+		    authDomain: "icloudems-core.firebaseapp.com",
+		    databaseURL: "https://icloudems-core.firebaseio.com",
+		    projectId: "icloudems-core",
+		    storageBucket: "icloudems-core.appspot.com",
+		    messagingSenderId: "124099104293",
+		    appId: "1:124099104293:web:9f0c51bb78c3b2a780f9cc",
+		    measurementId: "G-WRFL5JK8TD"
+		};
+
+
+	 	 // Initialize Firebase
+	
+
+		var appInitialize = firebase.initializeApp(firebaseConfig);
+ 		var firebasedb = firebase.firestore();
+		var myMessage = [];
+
+		// Store in Secure File
+
+		//AWS Configuration
+		AWS.config.region = 'ap-south-1'; 
+		AWS.config.credentials = new AWS.CognitoIdentityCredentials({ IdentityPoolId: 'ap-south-1:bfdbeed5-fd4e-4bf9-808f-646d20d6955b' });
+
+		const sns = new AWS.SNS();
+
+		const messaging = firebase.messaging();
+	    let endpointArn;
+	    let ending;
+	    var width=10;
+	    var TopicArray=[];
+	    var myMessage=[];
+	</script>
+
+
+    <script>
+    function signOut() {
+    	    				location.href="/corecampus/logout.php";
+
+    			    }
+
+    function onLoad() {
+      gapi.load('auth2', function() {
+        gapi.auth2.init();
+      });
+      
+    }
+  </script>
+  <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+
+  <script src="./All New Report_files/platform.js" async="" defer="" gapi_processed="true"></script>
+
+
+    <style>.tasks-list>li {
+		padding-right: 0;
+		padding-left: 0;
+		padding: .8rem 1.5rem;
+		}
+		.task-actions {
+		display: none;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -15px;
+		}
+		.task-actions>a.dropdown-toggle {
+		color: #aaa;
+		height: 30px;
+		width: 30px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		}
+		.task-info {
+		padding-left: 34px;
+		}
+		.tasks-list>li .checkbox input:checked~span {
+		text-decoration: line-through;
+		}
+		.tasks-list>li:hover .task-actions {
+		display: block
+		}
+		.zoom {
+		  transition: transform .2s; /* Animation */
+		  margin: 0 auto;
+		}
+
+		.zoom:hover {
+		  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		}
+		.image-cropper {
+		      width: 100px;
+		      height: 100px;
+		      position: relative;
+		      overflow: hidden;
+		      border-radius: 50%;
+		}
+
+		.page-title,.page-title-sep {
+			color: #337ab7;
+		}
+
+		.breadcrumb-item > a{
+			color: #337ab7;
+		}
+
+		.page-heading .page-breadcrumb .breadcrumb li {
+		    float: none;
+		    color: #337ab7;
+		}
+
+		.shadow-sm{
+		  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;
+		}
+
+		/*.tooltip {
+		   font-family: Arial,sans-serif !important;
+		}*/
+
+	</style>
+	<script type="text/javascript">
+
+		function filter_branches() {
+		    var input, filter, ul, li, a, i, txtValue;
+		    input = document.getElementById("branch_search_input");
+		    filter = input.value.toUpperCase();
+		    ul = document.getElementById("branch_list");
+		    li = ul.getElementsByTagName("li");
+		    for (i = 0; i < li.length; i++) {
+		        a = li[i].getElementsByTagName("a")[0];
+		        txtValue = a.textContent || a.innerText;
+		        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		            li[i].style.display = "";
+		        } else {
+		            li[i].style.display = "none";
+		        }
+		    }
+		}
+
+		function change_br_id(obj)
+		{
+			
+				if (window.XMLHttpRequest)
+				  {// code for IE7+, Firefox, Chrome, Opera, Safari
+				    xmlhttp=new XMLHttpRequest();
+				  }
+				else
+				  {// code for IE6, IE5
+				    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				 }
+				xmlhttp.onreadystatechange=function()
+				{
+				    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+					  // location.href='admin_index1.php';
+					    
+	
+
+					  		toastr.options = {
+							  "closeButton": true,
+							  "debug": false,
+							  "newestOnTop": true,
+							  "progressBar": true,
+							  "positionClass": "toast-top-right",
+							  "preventDuplicates": false,
+							  "onclick": null,
+							  "showDuration": "300",
+							  "hideDuration": "1000",
+							  "timeOut": "5000",
+							  "extendedTimeOut": "1000",
+							  "showEasing": "swing",
+							  "hideEasing": "linear",
+							  "showMethod": "fadeIn",
+							  "hideMethod": "fadeOut"
+							}
+
+							toastr.success('Branch Switched');
+							// toastr.options.onHidden = function() { location.reload(); };
+
+							setTimeout(function(){ location.reload();; }, 1000);
+
+
+
+					}
+				}
+				xmlhttp.open("GET","/corecampus/admin/change_br_id.php?q="+obj,true);
+				//Eddited By snehal
+						 
+						// Edited By snehal
+				xmlhttp.send();
+			
+			
+			
+		}
+	</script>
+
+
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57PQJ6N"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	<!-- Actual page content begins -->
+	<div class="page-wrapper"><!-- Ends in footer (div1) MAKE SURE TO CLOSE -->
+        <div class="content-wrapper"><!-- Ends in footer (div2) MAKE SURE TO CLOSE -->
+        	<div class="content-area"><!-- Ends in footer (div3) MAKE SURE TO CLOSE -->
+				<!-- BEGIN: Header-->
+							    <nav class="navbar navbar-expand navbar-light fixed-top header navbar-fixed-top" style="-webkit-box-shadow: 0px 17px 26px -20px rgba(0,0,0,0.5);
+				-moz-box-shadow: 0px 17px 26px -20px rgba(0,0,0,0.5);box-shadow: 0px 17px 26px -20px rgba(0,0,0,0.5);">
+			        <ul class="navbar-nav ">
+			            <li class="nav-item"><a class="nav-link navbar-icon sidebar-toggler" id="sidebar-toggler" href="https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php#"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></li>
+			            <li class="nav-item dropdown d-none d-sm-inline-block"><a class="nav-link dropdown-toggle megamenu-link" href="https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php#" data-toggle="dropdown"><span>Menu<i class="ti-angle-down arrow ml-2"></i></span></a>
+			                <div class="dropdown-menu nav-megamenu" style="min-width: 400px">
+			                    <div class="row m-0">
+			                    	<div class="col-12">
+			                    		<div class="card" data-toggle="tooltip" data-placement="top" title="" data-original-title="Academic Information">
+				                            <div class="card-body">
+				                                <b>Academic year</b> : 2022-2023 
+				                                &nbsp;&nbsp;&nbsp;
+				                                <b>Semester</b> :  										    </div> 
+				                            
+				                        </div>
+			                    	</div>
+			                    	
+			                    				                        	<div class="col-6"><a class="mega-menu-item" href="https://mrei.icloudems.com/corecampus/student/universityCalendar.php">
+				                        	<i class="fas fa-calendar-alt item-badge mb-4"></i>
+				                                <h5 class="mb-2">University Calender</h5>
+				                                <div class="text-muted font-12">Event Calender</div></a>
+				                        </div>
+			                        				                       <!--  <div class="col-6"><a class="mega-menu-item" href="/corecampus/admin/teacher/redirecttosupport.php?UserLogin=&GroupID=&UserID=" target="_blank"><i class="fas fa-headset item-badge mb-4"></i>
+			                                <h5 class="mb-2">Support</h5>
+			                                <div class="text-muted font-12">Online Support</div></a>
+			                        </div> -->
+
+			                        
+
+			                    </div>
+			                </div>
+			            </li>
+			        </ul>
+			        
+
+
+			        <!-- <center class="text-muted"> -->
+			        	<!-- <img height="60" width="120" alt="Cloud EMS " src="https://s3.ap-south-1.amazonaws.com/corecampus/images/mru.jpg" title="MRU-Faculty of Engineering" style="margin-right: 400px;margin-left:150 px">  -->
+
+			        	<img height="60" width="120" alt="Cloud EMS " src="./All New Report_files/mru.jpg" title="MRU-Faculty of Engineering" style="display: block;margin: auto;"> 
+
+			        	<!-- MRU-Faculty of Engineering -->
+			        <!-- </center> -->
+			        <ul class="navbar-nav">
+			          <!--   <li class="nav-item"><a class="nav-link navbar-icon" href="javascript:;" data-toggle="modal" data-target="#search-modal"><i class="ft-search"></i></a>
+			            </li> -->
+			            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle navbar-icon" data-toggle="dropdown" href="https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php#" onclick="showMessage()"><i class="ft-bell position-relative"></i><span class="notify-signal bg-primary" id="noficationBadge" style="display: none"></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0" style="min-width: 350px">
+                                <div class="py-4 px-3 text-center text-white mb-3" style="background-color: #2c2f48;">
+                                    <h5 class="m-0">Notifications</h5>
+                                </div>
+                                <div class="custom-scroll position-relative mb-3 ps" style="height:320px;">
+                                    <div class="list-group list-group-flush" id="NotificationsPanel">
+                                    	<a class="list-group-item list-group-item-action px-4 py-3" href="https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php#">
+                                    		<center>Loading ... <i class="fas fa-circle-notch fa-spin font-20"></i> </center>
+                                    	</a>	
+                                    </div>
+                                <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                                <!-- <div class="px-3 py-2 text-center"><a class="hover-link font-13" href="javascript:;">view all</a></div> -->
+                            </div>
+                        </li>
+                        <li class="nav-divider"></li>
+			            
+			            <li class="nav-divider"></li>
+
+			            			        		<li class="nav-item dropdown"><a class="nav-link dropdown-toggle no-arrow d-inline-flex align-items-center" data-toggle="dropdown" href="https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php#"><span class="d-none d-lg-inline-block mr-2">ASHWANI SONI </span>
+			        			<span class="position-relative d-inline-block">
+			        			<img class="rounded-circle rounded img-rounded image-cropper" src="./All New Report_files/p_1959_MRU217869.jpg" alt="image" style="max-width: 30px;max-height: 30px;border-radius: 50%;">
+			        			</span> 
+
+			        			</a>
+				                <div class="dropdown-menu dropdown-menu-right pt-0 pb-4" style="min-width: 280px;">
+				                    <div class="p-4 mb-4 media align-items-center text-white" style="background-color: #2c2f48;">
+				                    <!-- 	<div class="mr-3">
+				                    		Test
+				                    	</div> -->
+				                        <div class="media-body">
+				                            <h5><i class="fas fa-user"></i> &nbsp;ASHWANI SONI </h5> <br>
+				                            <div class="font-13">
+				                            	<i class="fas fa-graduation-cap"></i>
+				                            	BTech CSE				                            	<font style="font-size: 0.7rem">Sem 4</font>
+				                        	</div>
+				                        	<div class="font-8" style="font-size: 0.9rem;color: #7fffd4">
+				                        		&nbsp;<i class="fa fa-bookmark"></i> 
+				                        		&nbsp;2K21CSUN01108				                            </div>	
+				                            <div class="well">
+				                            	
+				                            	<hr style="  border: 0.05rem solid white;">
+				                            	<i class="fa fa-university "></i> &nbsp;MRU-Faculty of Engineering				                            </div>
+
+				                        </div>
+				                        <hr>
+				                    </div>
+                                   
+									<a class="dropdown-item d-flex align-items-center" href="https://mrei.icloudems.com/corecampus/student/myprofile/myprofile_nw.php"><i class="ft-user mr-3 font-18 text-muted"></i>Profile</a>				                    <!-- <a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-message-square mr-3 font-18 text-muted"></i>Messages</a> -->
+				                    <a class="dropdown-item d-flex align-items-center" href="https://mrei.icloudems.com/corecampus/student/myprofile/change_password_stud.php"><i class="fa fa-key mr-3 font-18 text-muted"></i>Reset Password</a>
+				                    
+				                    <div class="dropdown-divider my-3"></div>
+				                    <div class="mx-4"><button onclick="signOut()" class="btn btn-link p-0" href="../logout.php"><span class="btn-icon"><i class="ft-power mr-2 font-18"></i>Logout</span></button></div>
+				                </div>
+				            </li>
+			        		
+			           <!--  <li><a class="nav-link navbar-icon quick-sidebar-toggler" href="javascript:;"><span class="ti-align-right"></span></a></li> -->
+			        </ul>
+			    </nav><!-- END: Header-->
+			    <div class="badge badge-light" style="min-width:100% " id="current-pane">
+					<span class="badge badge-success badge-point"></span>
+					MRU-Faculty of Engineering					<a href="https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php#current-pane" class="close pull-right" data-dismiss="alert" aria-label="close" id="hide" style="    line-height: 0.7">×</a>
+				</div>
+			    <!-- BEGIN: Search form-->
+			    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog">
+			        <div class="modal-dialog modal-lg" role="document" style="margin-top: 100px">
+			            <div class="modal-content">
+			                <form class="search-top-bar" action="https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php#"><input class="form-control search-input" type="text" placeholder="Search..."><button class="reset input-search-icon" type="submit"><i class="ft-search"></i></button><button class="reset input-search-close" type="button" data-dismiss="modal"><i class="ft-x"></i></button></form>
+			            </div>
+			        </div>
+			    </div><!-- END: Search form-->
+
+			    
+			    
+
+
+<script>
+  document.addEventListener('contextmenu',(e)=>{
+    e.preventDefault();
+  }
+  );
+  document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+}
+</script>
+<input type="hidden" name="admnum" id="admnum" value="22101001N9249">
+<div id="myReportsForm">
+  
+    <div class="page-content fade-in-up1 ">
+    <div class="page-heading">
+        <div class="page-breadcrumb">
+          <h1 class="page-title page-title-sep">Performances </h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://mrei.icloudems.com/corecampus/student/main1.php">
+                    <i class="la la-home font-20"></i>
+                    </a>
+                </li>               
+                <li class="breadcrumb-item">Performances</li>                
+            </ol>            
+        </div>      
+    </div>
+
+    
+<div class="card animated fadeInUp">
+<div class="card-header">
+<h6 class="box-title">Report Card </h6>
+<div class="card-actions">
+<a class="card-collapse" title="Expand/Collapse"><i class="ti-angle-down"></i></a>
+</div>
+</div>
+<div class="card-body">
+
+    
+<form method="POST" action="https://mrei.icloudems.com/corecampus/student/grades/new/save/myreportcardSave.php?action=searchNow" id="myOwnSearchForm" name="myOwnSearchForm">
+
+<div class="row">         
+        <input type="hidden" name="admnum" id="admnum" value="22101001N9249">                  
+        <div class="col-md-3 col-lg-3 col-sm-3 col-12">
+        <div class="form-group mb-4">
+        <label class="active">Academic Year:<small>*</small></label>
+        <select name="acad_year" class="form-control" style="width:100%;" required="" id="acad_year">
+        <option value=""> Please Select </option>    
+                <option value="2012-2013"> 2012-2013 </option>
+                <option value="2013-2014"> 2013-2014 </option>
+                <option value="2014-2015"> 2014-2015 </option>
+                <option value="2015-2016"> 2015-2016 </option>
+                <option value="2016-2017"> 2016-2017 </option>
+                <option value="2017-2018"> 2017-2018 </option>
+                <option value="2018-2018"> 2018-2018 </option>
+                <option value="2018-2019"> 2018-2019 </option>
+                <option value="2019-2019"> 2019-2019 </option>
+                <option value="2019-2020"> 2019-2020 </option>
+                <option value="2020-2021"> 2020-2021 </option>
+                <option value="2021-2022"> 2021-2022 </option>
+                <option value="2022-2023"> 2022-2023 </option>
+                <option value="2023-2024"> 2023-2024 </option>
+                </select> 
+        </div>
+        </div>
+         
+
+
+          <div class="col-md-3 col-lg-3 col-sm-3 col-12">
+          <div class="form-group mb-4">
+          <label class="active">Class :<small>*</small></label>          
+          <select name="class_id" class="form-control select_search select2-hidden-accessible" style="width:100%;" required="" id="class_id" data-select2-id="class_id" tabindex="-1" aria-hidden="true">
+          <option value="" data-select2-id="2"> Please Select </option>       
+          </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-class_id-container"><span class="select2-selection__rendered" id="select2-class_id-container" role="textbox" aria-readonly="true" title=" Please Select "> Please Select </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>           
+          </div>
+          </div>
+
+
+          <div class="col-md-3 col-lg-3 col-sm-3 col-12">
+          <div class="form-group mb-4">
+          <label class="active">Division :<small>*</small></label>
+          <select name="div_id" class="form-control select_search select2-hidden-accessible" style="width:100%;" required="" id="division" data-select2-id="division" tabindex="-1" aria-hidden="true">
+          <option value="" data-select2-id="4"> Please Select </option>       
+          </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-division-container"><span class="select2-selection__rendered" id="select2-division-container" role="textbox" aria-readonly="true" title=" Please Select "> Please Select </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>           
+          </div>
+          </div>
+
+          <div class="col-md-3 col-lg-3 col-sm-3 col-12">
+          <div class="form-group mb-4">
+          <label class="active">Exam Name :<small>*</small></label>
+          <select name="exam_id" class="form-control select_search select2-hidden-accessible" style="width:100%;" required="" id="exam_name" data-select2-id="exam_name" tabindex="-1" aria-hidden="true">
+          <option value="" data-select2-id="6"> Please Select </option>       
+          </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="5" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-exam_name-container"><span class="select2-selection__rendered" id="select2-exam_name-container" role="textbox" aria-readonly="true" title=" Please Select "> Please Select </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>           
+          </div>
+          </div>
+
+
+</div>    
+<div class="row"> 
+<div class="col-md-12 col-lg-12 col-sm-12 col-12">
+<div class="form-group mb-4">
+<center><input type="submit" name="submit" value="Submit" class="btn btn-primary btn-sm mt-2"></center>
+</div>
+</div>
+</div>    
+
+</form> 
+</div>  
+</div>
+ 
+
+
+<div class="card animated fadeInUp">
+<div class="card-header">
+<h6 class="box-title full">Report Card</h6>
+</div>
+<div class="card-body">
+<div id="myOwnResult">Please Search for Result...</div>
+</div>
+</div> 
+
+</div></div>
+
+<script type="text/javascript" language="javascript">
+<!--
+function getXMLHTTP() { //function to return the xml http object
+        var xmlhttp=false;    
+        try{
+            xmlhttp=new XMLHttpRequest();
+        }
+        catch(e)    {        
+            try{            
+                xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch(e){
+                try{
+                req = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch(e1){
+                    xmlhttp=false;
+                }
+            }
+        }
+
+        return xmlhttp;
+    }
+</script>
+
+
+<script type="text/javascript">
+function getDivision(class_id) 
+{ 
+  var admnum = $('#admnum').val(); 
+  var strURL = "save/myreportcardSave.php?action=getDivision";
+  var param="class_id="+class_id+"&admnum="+admnum;;
+ //alert(strURL)
+  var req = getXMLHTTP();
+  if (req) { 
+  req.onreadystatechange = function() {
+      if (req.readyState == 4) {
+          if (req.status == 200) {
+                  document.getElementById("division").innerHTML = req.responseText;
+                  $('.select_search').select2();
+                   toastr.info("Division Loaded Successfully...");
+          } else {
+             // alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+          }
+      }
+  }
+  req.open("POST", strURL, true);
+  req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  req.send(param);
+  }
+} 
+
+$(document).on('change', '#class_id', function() { 
+  var class_id = $('#class_id').val();
+  getDivision(class_id);  
+});
+</script>
+
+
+<script type="text/javascript">
+function getmyClass(acad_year) 
+{ 
+  var admnum = $('#admnum').val(); 
+  var strURL = "save/myreportcardSave.php?action=getClass";
+  var param="acad_year="+acad_year+"&admnum="+admnum;
+ //alert(strURL)
+  var req = getXMLHTTP();
+  if (req) { 
+  req.onreadystatechange = function() {
+      if (req.readyState == 4) {
+          if (req.status == 200) {
+                  document.getElementById("class_id").innerHTML = req.responseText;
+                  $('.select_search').select2();
+                   toastr.info("Class Loaded Successfully...");
+          } else {
+             // alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+          }
+      }
+  }
+  req.open("POST", strURL, true);
+  req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  req.send(param);
+  }
+} 
+
+$(document).on('change', '#acad_year', function() { 
+  var acad_year = $('#acad_year').val();
+  getmyClass(acad_year);  
+});
+</script>
+
+
+<script type="text/javascript">
+function getMyExam(acad_year,class_id,division,br_id) 
+{
+  var strURL = "save/myreportcardSave.php?action=getMyExam";
+  var param="acad_year="+acad_year+"&class_id="+class_id+"&division="+division+"&br_id="+br_id;
+ //alert(strURL)
+  var req = getXMLHTTP();
+  if (req) { 
+  req.onreadystatechange = function() {
+      if (req.readyState == 4) {
+          if (req.status == 200) {
+                  document.getElementById("exam_name").innerHTML = req.responseText;
+                  $('.select_search').select2();
+                   toastr.info("Exam Loaded Successfully...");
+          } else {
+             // alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+          }
+      }
+  }
+  req.open("POST", strURL, true);
+  req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  req.send(param);
+  }
+} 
+
+$(document).on('change', '#division', function() { 
+  var acad_year = $('#acad_year').val();
+  var class_id = $('#class_id').val();
+  var division = $('#division').val();
+  var br_id = 3 
+  getMyExam(acad_year,class_id,division,br_id);  
+});
+</script>
+
+
+<script type="text/javascript">
+$("#myReportsForm").on('submit', '#myOwnSearchForm', function(event){ getMyLoader(1);
+  event.preventDefault();
+
+  var post_url = $(this).attr("action");
+  var request_method = $(this).attr("method");
+  var form_data = $(this).serialize();
+
+  //alert(post_url)
+  $.ajax({
+    url : post_url,
+    type: request_method,
+    data : form_data,
+  }).done(function(response){
+      $('#myOwnResult').html(response);
+      $('#example').DataTable({ "destroy": false });
+      toastr.success("Searching Completed Successfully..."); 
+      getMyLoader(0);
+  });
+});
+</script>
+
+
+
+
+<script>
+function getMyReportForm(tt_ver) 
+{ 
+  var admnum = $('#admnum').val(); 
+  //alert(admnum);
+  var strURL = "save/myreportcardSave.php?action=index&admnum="+admnum;
+  var req = getXMLHTTP();
+  if (req) { 
+  req.onreadystatechange = function() {
+      if (req.readyState == 4) {
+          if (req.status == 200) {
+                  document.getElementById("myReportsForm").innerHTML = req.responseText;
+                  $('#br_id').trigger('change');
+                  $('.select_search').select2();
+                   toastr.info("Form Loaded Successfully...");
+          } else {
+              alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+          }
+      }
+  }
+  req.open("POST", strURL, true);
+  req.send(null);
+  }
+}
+
+$(document).ready( function() { 
+  getMyReportForm();  
+});
+</script>
+
+
+<script type="text/javascript">
+  $("#sidebar").toggleClass("toggled");
+</script>
+
+<style> html{display:block} </style>
+
+        <style type="text/css">
+        .link_active_class
+        {
+            background-color: #161F33 !important;
+            border-left: 2px solid #23aee1;
+            color: #23aee1 !important;
+        }
+    </style>
+    <!-- BEGIN: Sidebar-->
+    <div class="wrapper page-sidebar custom-scroll toggled1 ps ps--active-x ps--active-y" id="sidebar" style="background-color: #363f4a">
+        <div class="sidebar-header">
+            <a class="sidebar-brand" href="https://www.icloudems.com/" target="_blank">
+                <img src="./All New Report_files/cnv_logo_short.png" height="40" width="40" class="img-responsive ">
+            </a>
+            <a class="sidebar-brand-mini" href="https://www.icloudems.com/" target="_blank">
+                <img src="./All New Report_files/cnv_logo_short.png" height="40" width="40" style="min-width: 40px" class="img-responsive ">
+            </a>
+            <span class="sidebar-points">
+                <h4 style="color: white">iCloudEMS</h4>
+            </span>
+        </div>
+
+      
+       <!--  <div class="form-group mb-4 px-2 "><label class="active"></label><input class="form-control form-control-rounded search" type="text" placeholder="Type To Filter Branches" onkeyup="filter_branches()" id="branch_search_input">
+        </div> -->
+        <ul class="sidebar-menu metismenu">
+            
+                            
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/grades/myadmitcard_gu.php">
+                            <img src="./All New Report_files/online-exam.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Admit Card </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/assignments/myassignments.php">
+                            <img src="./All New Report_files/assignments.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Assignments </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/attendance/subwise_attendace_new.php">
+                            <img src="./All New Report_files/attendance.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Attendance </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/circular/circularView.php">
+                            <img src="./All New Report_files/circnotice.png" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Circular </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/school/settings.php">
+                            <img src="./All New Report_files/college-profile.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">College Info </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/subjects/mysubjects.php">
+                            <img src="./All New Report_files/library.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Courses </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/fees/feeUndertakingStud.php">
+                            <img src="./All New Report_files/employees.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Fee Undertaking </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/quiz/instructions.php">
+                            <img src="./All New Report_files/examinations.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Feedback </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/fees/common_all_fees.php">
+                            <img src="./All New Report_files/fees.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Fees </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/school/google_form_links.php">
+                            <img src="./All New Report_files/google-news.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Google Form Links </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/grievance/grievance_entry.php">
+                            <img src="./All New Report_files/assignments.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Grievance Complaint </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/lms_content.php">
+                            <img src="./All New Report_files/subjects.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">LMS </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/grades/new/myreportcard.php">
+                            <img src="./All New Report_files/performance.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Performances </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/proctor/proctor_communication.php">
+                            <img src="./All New Report_files/mentor1.png" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Proctor </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/admin/new_survey/StudentSurveylist.php">
+                            <img src="./All New Report_files/examinations.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Survey </span>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://mrei.icloudems.com/corecampus/student/schedulerand/tt_report_view.php">
+                            <img src="./All New Report_files/time-table.svg" style="min-height: 25px;min-width: 25px;border-radius:100px" class="sidebar-item-icon" title="">
+                            <span class="nav-label">Time Table </span>
+                        </a>
+                    </li>
+                        </ul>
+    <div class="ps__rail-x" style="width: 65px; left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 27px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 737px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 594px;"></div></div></div><!-- END: Sidebar-->    <!-- 
+            <footer class="page-footer flexbox  fixed-bottom">
+                <div class="text-muted">2019 © <strong>iCloudEMS</strong>. All rights reserved</div>
+            </footer> -->
+            <!-- END: Footer-->
+            <!-- </div> -->
+        </div> <!-- End page-wrapper (div 1 from header) --> 
+    </div> <!-- End content-wrapper (div 2 from header) -->
+</div> <!-- End content-area (div 3 from header) -->
+
+    
+<style> html{display:block} </style>
+  
+<!-- BEGIN: Page backdrops-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop" style="display: none;">
+        <div class="page-preloader">Loading</div>
+    </div><!-- END: Page backdrops-->
+    <!-- CORE PLUGINS-->
+    <script>
+
+    messaging.onMessage((payload) => 
+    {
+        let payloadArr = payload.data.default.split('$');
+        var title = payloadArr[0];
+        var body = payloadArr[1];
+
+        
+        if(payload.data.default)
+        {
+            localStorage.setItem("messageStatus","true");
+            $("#noficationBadge").show();
+            var audio = new Audio('https://corecampus.s3.ap-south-1.amazonaws.com/assets/audio/notification/Dew.ogg');
+            audio.muted = true;
+            audio.play();
+        }
+    });
+
+    function showMessage()
+    {
+        
+        $("#noficationBadge").hide();
+        var notificationCount = 0;
+    
+
+        // where("capital", "==", true)
+
+        firebasedb.collection('mru').where("topicname",'==',"").where("moduleName",'==',"QMS").orderBy("createdAt","desc").get()
+        .then(function(querySnapshot) {
+            $("#NotificationsPanel").html("");
+            querySnapshot.forEach(function(doc) {
+                notificationCount++;
+                myMessage.push(doc.data().message);
+                let Arr = doc.data().message.split("$")
+                var title =Arr[0];
+                var body = Arr[1];
+                var dateTime = doc.data().createdAt;
+
+                $("#NotificationsPanel").append(`<a class="list-group-item list-group-item-action pt-5" href="#">
+                    <div class="media align-items-center"><i class="far fa-bell text-center font-14 text-primary mr-3" style="margin-top: -10%;"></i>
+                        <div class="media-body">
+                            <div class="font-13 text-muted" style="margin-top: -18px;">`+title+`</div>
+                            <span style="font-size: 9px;float: right;">  `+moment(dateTime).format("DD MMM YYYY LT")+`</span>
+                        </div>
+                    </div>
+                </a>`);
+
+            });
+
+            if(notificationCount == 0){
+                $("#NotificationsPanel").html("");
+                $("#NotificationsPanel").html(`<a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                    <center>
+                        <i class="far fa-check-circle " style="font-size: 200px;opacity: 30%;"></i> <br>
+                        <br>
+                        <h6 class="" style="opacity: 50%;">All caught up!</h6>
+                    </center>
+                    
+                </a>`);
+            }   
+        })
+        .catch(function(error) {
+            console.log("Error getting documents: ", error);
+              $("#NotificationsPanel").html("");
+                $("#NotificationsPanel").html(`<a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                    <center>
+                        <i class="far fa-check-circle " style="font-size: 200px;opacity: 30%;"></i> <br>
+                        <br>
+                        <h6 class="" style="opacity: 50%;">All caught up!</h6>
+                    </center>
+                    
+                </a>`);
+        });
+
+        localStorage.setItem("firstClick","false")
+    }
+
+
+    </script>
+    <script src="./All New Report_files/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./All New Report_files/bootstrap-select.min.js"></script>
+
+    <script src="./All New Report_files/jquery-ui.min.js"></script>
+    <script src="./All New Report_files/metisMenu.min.js"></script>
+    <script src="./All New Report_files/perfect-scrollbar.min.js"></script><!-- PAGE LEVEL PLUGINS-->
+    <script src="./All New Report_files/moment.min.js"></script>
+    <script src="./All New Report_files/daterangepicker.js"></script>
+    <script src="./All New Report_files/Chart.min.js"></script>
+    <!-- <script src="/corecampus/new_ui_assets/vendors/apexcharts/dist/apexcharts.min.js"></script> -->
+    <script src="./All New Report_files/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="./All New Report_files/jquery-jvectormap-world-mill-en.js"></script><!-- CORE SCRIPTS-->
+    <script src="./All New Report_files/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
+    <script src="./All New Report_files/select2.full.min.js"></script>
+    <script src="./All New Report_files/datatables.min.js"></script>
+    <script src="./All New Report_files/jquery.validate.min.js"></script>
+    <script src="./All New Report_files/bootstrap-loadingbtn.js"></script>
+    <script src="./All New Report_files/bootstrap-datepicker.min.js"></script>
+
+ 
+ 
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
+            $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');
+            $('#products .item').addClass('grid-group-item');});
+        });
+
+        $(".select_search").select2();
+
+        // $('.datatable_plugin_enable1').DataTable({
+        //     responsive: true,
+        //     dom: 'Bfrtip',
+        //     buttons: [
+        //         'copy', 'excel',{
+        //             extend:'pdf',
+        //             orientation: 'landscape',
+        //             title:'Student Information'
+        //         }, 
+        //         'csv', 'print'
+        //     ],
+        //     "lengthMenu": [[100, 250, 500, 1000, -1], [100, 250, 500, 1000, "All"]],
+        // });
+
+          $('.datatable_plugin_enable').DataTable({
+                responsive: false,
+                dom: 'lBfrtip',
+                buttons: [
+                    {
+                        extend:'pdf',
+                        orientation: 'potrait',
+                        title:''
+                    }, 
+                    {
+                        extend: 'csv',
+                        messageTop:null,
+                        messageBottom: null,
+                        title:''
+                    },
+                    {
+                        extend: 'print',
+                        messageTop:null,
+                        messageBottom: null
+                    },
+                     {
+                        extend: 'copy',
+                        messageTop:null,
+                        messageBottom: null
+                    },
+                     {
+                        extend: 'excel',
+                        messageTop:null,
+                        messageBottom: null,
+                        title:''
+                    },
+                ],
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+            });
+
+        $('.datatable_plugin').DataTable({
+            "lengthMenu": [[10,50,100, 250, 500, 1000, -1], [10,50,100, 250, 500, 1000, "All"]],
+            responsive: false
+        });
+
+
+        
+    </script>
+
+
+
+<div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" src="./All New Report_files/iframe.html"></iframe></body></html>

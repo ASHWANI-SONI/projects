@@ -3,6 +3,7 @@ let init = () => {
     document.getElementById("mydiv").innerHTML += "<button id='btn1' onclick='myMove()'>Submit</button>";
 }
 init();
+let x = 7;
 let myMove = () => {
     let pos = 0;
     let ele = document.getElementById("ne");
